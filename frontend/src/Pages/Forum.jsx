@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './forum/css/forum.css'
 
 
 
@@ -45,10 +46,10 @@ function ViewThreads() {
 
 
   return (
-    <div>
+    <div className='forum-main'>
     <div className="container-fluid">
-    <h2 className='mt-3'>Forum List</h2>
-    <h10 className='mt-3'>General discussions on Sneakers and the community. Possible leads and more!</h10><br></br>
+    <h2 className='forum-list'>Forum List</h2>
+    <p className='forum-list-general'>General discussions on Sneakers and the community. Possible leads and more!</p><br></br>
     <Link to="/forum/createForum">
         <button className=' mt-3 btn btn-danger'>+</button>
       </Link>
@@ -57,8 +58,9 @@ function ViewThreads() {
           <tbody className='p-5 '>
             {threadsList.map(thread => (
               <tr className='border border-danger p-5 bg-danger-subtle' key={thread._id}>
-                <td className='pt-3 ps-2'><h4 className='fw-bolder '>{thread.threadTitle}</h4>By: {thread.threadAuthor}</td>
-                <td style={{width: "600px", height:"50px"}}>{thread.threadDescription}</td>
+                <td className='pt-3 ps-2'><h4 className='fw-bolder' style={{ fontSize: '16px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                  {thread.threadTitle}</h4> By: {thread.threadAuthor}</td>
+                <td style={{ width: "600px", height: "50px", overflow: "hidden", textOverflow: "ellipsis" }}>{thread.threadDescription}</td>
                 <Link to={`/forum/view/${thread._id}`}>
                   <button className='btn btn-secondary btn-large mt-4 me-5 fw-bolder'>{`>`}</button>
                 </Link>
