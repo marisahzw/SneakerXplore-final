@@ -36,6 +36,8 @@ const Navbar = () => {
                     <li onClick={() => { setMenu("sneakers") }}><Link style={{ textDecoration: 'none' }} to='/sneakers'>Sneakers</Link>{menu === "sneakers" ? <hr /> : <></>}</li>
                     <li onClick={() => { setMenu("calendar") }} ><Link style={{ textDecoration: 'none' }} to='/calendar'>Calendar</Link>{menu === "calendar" ? <hr /> : <></>}</li>
                     <li onClick={() => { setMenu("forum") }} ><Link style={{ textDecoration: 'none' }} to='/forum'>Forum</Link>{menu === "forum" ? <hr /> : <></>}</li>
+                    <li onClick={() => { setMenu("search") }} ><Link style={{ textDecoration: 'none' }} to='/search'>Search</Link>{menu === "search" ? <hr /> : <></>}</li>
+
                 </ul>
                 {isLoggedIn ? (
                     <>

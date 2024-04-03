@@ -17,6 +17,7 @@ import Login from './Pages/Login';
 import SneakerDetail from './Pages/SneakerDetail';
 import Hero from './Components/Hero/Hero';
 import UserProfile from './Pages/UserProfile.jsx';
+import Search from './Pages/search.js';
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
           <Route path="/forum/createForum" element={<div className={styles["route-specific"]}><CreateForum /></div>} />
           <Route path="/forum/updateThread/:id" element={<div className={styles["route-specific"]}><UpdateForum /></div>} />
           <Route path="/forum/view/:id" element={<div className={styles["route-specific"]}><ViewForum /></div>} />
+          <Route path="/search" element={<div className={styles["route-specific"]}><Search /></div>} />
 
           <Route path="/" element={<div className={styles["route-specific"]}><Hero /></div>} />
 
