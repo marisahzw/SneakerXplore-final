@@ -1,0 +1,26 @@
+
+
+.converse-container {
+    position: relative;
+    text-align: center;
+    font-family: roboto;
+  
+  }
+  
+  .converse-image {
+    width: 100%;
+    border-radius: 20px;
+    height: 70%;
+    
+
+  }
+  
+  .text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: aliceblue;
+  }
+  

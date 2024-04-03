@@ -1,0 +1,30 @@
+.newbalance-container{
+    max-width: 100%;
+    max-height: fit-content;
+    font-family: roboto;
+}
+.newbalance-image{
+    width: 100%;
+    position: relative;
+}
+
+.newbalance-text{
+    color: black;
+    font-weight: 800;
+    text-align: left !important;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+   
+}
+.__button{
+    background-color: #e30808;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}

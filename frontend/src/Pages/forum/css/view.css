@@ -1,0 +1,124 @@
+view-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .thread-info {
+        display: flex; 
+        justify-content: space-between; 
+        font-size: 30px;
+        color: red;
+      }
+      
+      .thread-info p {
+        margin: 0; 
+      }
+      
+      .thread-info strong {
+        font-weight: bold; 
+      }
+      
+
+.view-heading{
+      font-size: 54px;
+      margin-bottom: 20px;
+      text-align: center;
+      color: red;
+}
+
+.no-replies{
+    color: red;
+}
+
+.threadview-description {
+    background-color: #f0f0f0; 
+    border: 1px solid #100f0f; 
+    border-radius: 8px; 
+    padding: 10px; 
+    margin-top: 20px;
+    max-height: max-content;
+
+  }
+  .view-likes{
+    align-items: end;
+    text-align: right;
+    color: red; 
+  }
+  
+
+
+
+
+.reply-box{
+      background-color: #fff;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 70%;
+}
+
+
+    .view-input{
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box; 
+    
+    }
+
+    .view-buttons {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .viewback-button,
+    .viewsend-button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    
+    .viewback-button {
+      background-color: #FF0000;
+      color: #FFFFFF;
+    }
+    
+    .viewsend-button {
+      background-color: #ff0000;
+      color: #FFFFFF;
+    }
+    
+
+
+    
+
+
+
+
+
+
+    .style-loading
+    {
+      font-style:italic;
+      color: #777;
+    }
+
+
+    .view-labels
+    {
+      display:block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+ 
