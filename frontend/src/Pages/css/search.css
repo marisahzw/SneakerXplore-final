@@ -1,0 +1,32 @@
+.input-class{
+    margin-top: 10px;
+    width: 90%;
+    height: 60px;
+    border-radius: 20px;
+}
+
+.search-bar{
+    width: 100%;
+}
+
+.search-icon{
+    width: max-content;
+    height: 60px;
+    margin: 10px;
+    border-radius: 15px;
+
+}
+
+search-text{
+    margin-top: 10px;
+    text-align: center;
+    font-weight: 800;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.sneaker-search-name{
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Times New Roman', Times, serif;
+}

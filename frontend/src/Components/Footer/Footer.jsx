@@ -7,8 +7,8 @@ import ScrollReveal from 'scrollreveal';
 const Footer = () => {
     useEffect(() => {
         ScrollReveal().reveal('.footer', {
-            delay: 2500,
-            duration: 2000,
+            delay: 1000,
+            duration: 1000,
             distance: '80px',
             origin: 'right',
             reset: true

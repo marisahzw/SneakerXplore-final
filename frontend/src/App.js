@@ -17,7 +17,7 @@ import Login from './Pages/Login';
 import SneakerDetail from './Pages/SneakerDetail';
 import Hero from './Components/Hero/Hero';
 import UserProfile from './Pages/UserProfile.jsx';
-import Search from './Pages/search.js';
+import Search from './Pages/Search.jsx';
 
 
 function App() {

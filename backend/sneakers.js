@@ -209,6 +209,78 @@ app.get("/unreleased-sneakers", async (req, res) => {
   }
 });
 
+//search
+
+
+
+app.get("/search", async (req, res) => {
+  try {
+      let { query, filter } = req.query;
+      // Replace spaces with '+' symbols in the search query
+      query = query.replace(/\s+/g, '+');
+
+      const options = {
+          method: "GET",
+          hostname: "www.sneakerjagers.com",
+          port: null,
+          path: `/api/sneakers/filter?query=${query}&filter=${filter}`, 
+          headers: {
+              Authorization: "Bearer 3596|TjLohpmQOZ01GCtwit6braWmldNwzrojyKVvMQ0N",
+          },
+      };
+
+      const request = https.request(options, function (response) {
+          let data = "";
+
+          response.on("data", function (chunk) {
+              data += chunk;
+          });
+
+          response.on("end", function () {
+              try {
+                  const sneakersData = JSON.parse(data);
+                  const sneakersWithSlugs = sneakersData.items.map(sneaker => ({
+                      ...sneaker,
+                      slug: generateSlug(sneaker.name),
+                  }));
+                  res.json(sneakersWithSlugs);
+              } catch (error) {
+                  console.error("Error parsing JSON data:", error);
+                  res.status(500).json({ error: "Internal Server Error" });
+              }
+          });
+      });
+
+      request.on("error", function (error) {
+          console.error("Request error:", error);
+          res.status(500).json({ error: "Internal Server Error" });
+      });
+
+      request.end();
+  } catch (error) {
+      console.error("Error fetching sneakers:", error);
+      res.status(500).json({ error: "Internal Server Error" });
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //SNEAKER NIKEE ARIVALS
